@@ -9,6 +9,7 @@ const skinTypeData = {
     description: '저자극, 순한 성분 중심의 제품으로 피부를 보호하세요',
     color: 'bg-green-50',
     textColor: 'text-green-800',
+    mainImage: '/img/bringgreen.jpg',
     products: [
       {
         id: 'bringgreen',
@@ -34,12 +35,13 @@ const skinTypeData = {
     description: '수분 공급과 보습에 특화된 제품으로 촉촉한 피부를 만들어보세요',
     color: 'bg-orange-50',
     textColor: 'text-orange-800',
+    mainImage: '/img/달바.jpg',
     products: [
       {
         id: 'carrot',
         name: '당근 보습 세트',
         price: '75,000',
-        image: '/img/carrot.jpg',
+        image: '/img/달바.jpg',
         description: '당근 추출물로 만든 보습 세트',
         features: ['당근 추출물', '강력한 보습', '영양 공급']
       },
@@ -59,6 +61,7 @@ const skinTypeData = {
     description: '유분 조절과 모공 관리에 특화된 제품으로 깨끗한 피부를 만들어보세요',
     color: 'bg-blue-50',
     textColor: 'text-blue-800',
+    mainImage: '/img/estur.jpg',
     products: [
       {
         id: 'estur',
@@ -84,6 +87,7 @@ const skinTypeData = {
     description: '여드름 완화와 진정 효과에 특화된 제품으로 건강한 피부를 만들어보세요',
     color: 'bg-red-50',
     textColor: 'text-red-800',
+    mainImage: '/img/redblemish.jpg',
     products: [
       {
         id: 'redblemish',
@@ -101,12 +105,13 @@ const skinTypeData = {
     description: 'T존과 U존을 균형있게 관리하는 제품으로 완벽한 피부를 만들어보세요',
     color: 'bg-yellow-50',
     textColor: 'text-yellow-800',
+    mainImage: '/img/torriden.jpg',
     products: [
       {
         id: 'torrden',
         name: '토리덴 세트',
         price: '85,000',
-        image: '/img/torrden1.jpg',
+        image: '/img/torriden.jpg',
         description: '복합성 피부를 위한 균형 관리 세트',
         features: ['균형잡힌 관리', 'T존 집중', 'U존 보습']
       }
@@ -118,6 +123,7 @@ const skinTypeData = {
     description: '영양 공급과 활성화에 특화된 제품으로 생기있는 피부를 만들어보세요',
     color: 'bg-purple-50',
     textColor: 'text-purple-800',
+    mainImage: '/img/vit.jpg',
     products: [
       {
         id: 'vitamin',
@@ -135,6 +141,7 @@ const skinTypeData = {
     description: '모든 피부타입에 적합한 범용 제품으로 일상 필수 아이템을 만나보세요',
     color: 'bg-yellow-100',
     textColor: 'text-yellow-900',
+    mainImage: '/img/자작나무 선크림.jpg',
     products: [
       {
         id: 'sunscreen',
@@ -148,8 +155,16 @@ const skinTypeData = {
   }
 };
 
-export default function CategoryPage({ params }) {
-  const skinType = skinTypeData[params.category];
+export default async function CategoryPage({ params }) {
+  const { category } = await params;
+  
+  console.log('params:', params);
+  console.log('category:', category);
+  console.log('Available keys:', Object.keys(skinTypeData));
+  
+  const skinType = skinTypeData[category];
+  
+  console.log('Found skinType:', skinType);
 
   if (!skinType) {
     return (
@@ -171,13 +186,28 @@ export default function CategoryPage({ params }) {
       
       {/* 카테고리 헤더 */}
       <section className={`${skinType.color} py-16`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className={`text-4xl md:text-5xl font-bold ${skinType.textColor} mb-6`}>
-            {skinType.name}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {skinType.description}
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            {/* 텍스트 정보 */}
+            <div className="text-center lg:text-left lg:flex-1 mb-8 lg:mb-0">
+              <h1 className={`text-4xl md:text-5xl font-bold ${skinType.textColor} mb-6`}>
+                {skinType.name}
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl">
+                {skinType.description}
+              </p>
+            </div>
+            
+            {/* 대표 이미지 */}
+            <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={skinType.mainImage}
+                alt={skinType.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -14,7 +14,7 @@ const skinTypes = [
     id: 'dry', 
     name: '건성 피부', 
     description: '수분 공급, 보습 중심',
-    image: '/img/carrot.jpg',
+    image: '/img/달바.jpg',
     products: ['당근 보습 세트', '달바 보습 크림']
   },
   { 
@@ -36,7 +36,7 @@ const skinTypes = [
     name: '복합성 피부', 
   
     description: '균형잡힌 관리, T존 집중',
-    image: '/img/torrden1.jpg',
+    image: '/img/torriden.jpg',
     products: ['토리덴 세트']
   },
   { 
