@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 피부타입별 화장품 쇼핑몰 웹페이지 계획
 
-## Getting Started
+## 프로젝트 개요
+피부타입별 맞춤 화장품을 판매하는 쇼핑몰 웹사이트입니다. 각 피부타입에 맞는 제품을 추천하고 판매합니다.
 
-First, run the development server:
+## 이미지 파일 분석
+현재 `public/img/` 폴더에 있는 이미지들을 피부타입별로 분류:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🟢 민감성 피부
+- `bringgreen.jpg`, `bringgreelnjpg.jpg` - 브링그린 제품
+- `독도토너.jpg` - 독도토너
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🟠 건성 피부  
+- `carrot.jpg` - 당근 제품
+- `달바.jpg` - 달바 제품
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🔵 지성 피부
+- `estur.jpg` - 에스투르 제품
+- `스쿠알란.jpg` - 스쿠알란 제품
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔴 트러블성 피부
+- `redblemish.jpg` - 레드블레미시 제품
 
-## Learn More
+### 🟡 복합성 피부
+- `torrden1.jpg`, `torriden.jpg` - 토리덴 제품
 
-To learn more about Next.js, take a look at the following resources:
+### 🟣 영양 부족 피부
+- `vit.jpg` - 비타민 제품
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ☀️ 모든 피부타입
+- `자작나무 선크림.jpg` - 자작나무 선크림
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 웹페이지 구조
 
-## Deploy on Vercel
+### 1. 메인 페이지
+- 인기 제품 소개
+- 피부타입별 카테고리 네비게이션
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. 피부타입별 전용 페이지
+각 피부타입에 맞는 제품들을 카테고리별로 구성:
+- 제품 목록 및 상세 정보
+- 피부타입별 추천 제품
+- 사용법 및 팁 제공
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. 제품 상세 페이지
+- 제품 이미지 갤러리
+- 성분 정보
+- 사용법 및 주의사항
+- 리뷰 및 평점
+- 관련 제품 추천
+
+### 4. 사용자 기능
+- 회원가입/로그인
+- 장바구니 및 위시리스트
+- 개인 맞춤 추천
+
+## 기술 스택
+- **Frontend**: Next.js
+- **Styling**: CSS/Tailwind CSS
+- **State Management**: React Context 또는 Redux
+- **Database**: (추후 결정)
+
+## 개발 단계
+1. ✅ 프로젝트 초기 설정
+2. 🔄 메인 페이지 레이아웃 구성
+3. ⏳ 피부타입별 페이지 개발
+4. ⏳ 제품 상세 페이지 개발
+5. ⏳ 사용자 인증 시스템
+6. ⏳ 장바구니 및 결제 시스템
+7. ⏳ 반응형 디자인 적용
+
+## 디자인 컨셉
+- 깔끔하고 모던한 UI/UX
+- 피부타입별 색상 테마 적용
+- 직관적인 네비게이션
+- 모바일 친화적 반응형 디자인
