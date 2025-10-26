@@ -6,7 +6,6 @@ const skinTypes = [
   { 
     id: 'sensitive', 
     name: '민감성 피부', 
-    emoji: '🟢', 
     description: '저자극, 순한 성분 중심',
     image: '/img/bringgreen.jpg',
     products: ['브링그린', '독도토너']
@@ -14,7 +13,6 @@ const skinTypes = [
   { 
     id: 'dry', 
     name: '건성 피부', 
-    emoji: '🟠', 
     description: '수분 공급, 보습 중심',
     image: '/img/carrot.jpg',
     products: ['당근 보습 세트', '달바 보습 크림']
@@ -22,7 +20,6 @@ const skinTypes = [
   { 
     id: 'oily', 
     name: '지성 피부', 
-    emoji: '🔵', 
     description: '유분 조절, 모공 관리',
     image: '/img/estur.jpg',
     products: ['에스투르 세트', '스쿠알란 오일']
@@ -30,7 +27,6 @@ const skinTypes = [
   { 
     id: 'acne', 
     name: '트러블성 피부', 
-    emoji: '🔴', 
     description: '여드름 완화, 진정 효과',
     image: '/img/redblemish.jpg',
     products: ['레드블레미시 세트']
@@ -38,7 +34,7 @@ const skinTypes = [
   { 
     id: 'combination', 
     name: '복합성 피부', 
-    emoji: '🟡', 
+  
     description: '균형잡힌 관리, T존 집중',
     image: '/img/torrden1.jpg',
     products: ['토리덴 세트']
@@ -46,7 +42,6 @@ const skinTypes = [
   { 
     id: 'nutrient', 
     name: '영양 부족 피부', 
-    emoji: '🟣', 
     description: '영양 공급, 활성화',
     image: '/img/vit.jpg',
     products: ['비타민 세트']
@@ -54,7 +49,6 @@ const skinTypes = [
   { 
     id: 'all', 
     name: '모든 피부타입', 
-    emoji: '☀️', 
     description: '범용성, 일상 필수',
     image: '/img/자작나무 선크림.jpg',
     products: ['자작나무 선크림']

@@ -172,7 +172,6 @@ export default function CategoryPage({ params }) {
       {/* 카테고리 헤더 */}
       <section className={`${skinType.color} py-16`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-6xl mb-4">{skinType.emoji}</div>
           <h1 className={`text-4xl md:text-5xl font-bold ${skinType.textColor} mb-6`}>
             {skinType.name}
           </h1>
